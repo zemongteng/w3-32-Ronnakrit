@@ -1,5 +1,6 @@
 import { View , Text , Button , StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App(){
 
@@ -8,8 +9,8 @@ export default function App(){
     return(
 
         <View style={styles.container}>
-            <Text style={styles.mainTitle}>Home</Text>
-            <Button title="Calculate" onPress={() => router.navigate('/square')}/>
+            <Text style={styles.mainTitle}>Calculater</Text>
+            <Button title="พื้นที่สี่เหลี่ยม" onPress={() => router.navigate('/square')}/>
         </View>
     )
 }
@@ -23,7 +24,8 @@ const styles = StyleSheet.create({
     },
 
     mainTitle:{
-        fontSize:20,
+        fontSize:30,
         fontWeight:"700"
-    }
+    },
+
 })
